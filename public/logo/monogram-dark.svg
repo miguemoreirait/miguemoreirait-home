@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+  <rect x="4" y="4" width="88" height="88" rx="7" fill="none" stroke="#94B4D2" stroke-width="1.5"/>
+  <text x="48" y="48" text-anchor="middle" dominant-baseline="central"
+        font-family="'JetBrains Mono', monospace" font-weight="500" font-size="34" letter-spacing="-1"
+        fill="#94B4D2">[MM]</text>
+</svg>

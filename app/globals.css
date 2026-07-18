@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-serif: var(--font-instrument-serif);
+  --font-sans: var(--font-geist);
+  --font-mono: var(--font-jetbrains-mono);
+
+  --color-bg-deep: #13203a;
+  --color-bg-mid: #14283d;
+  --color-bg-top: #1a3153;
+  --color-ink: #e6eef6;
+  --color-ink-soft: #d7e3ef;
+  --color-ink-muted: #b9cce0;
+  --color-accent: #94b4d2;
+  --color-accent-dim: #7e9dbc;
+  --color-primary: #5687b5;
+  --color-cyan: #00e5c7;
+  --color-cyan-deep: #00b89e;
+  --color-error: #e8998c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(165deg, #1a3153 0%, #14283d 52%, #13203a 100%);
+  background-attachment: fixed;
+  color: var(--color-ink);
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(0, 229, 199, 0.25);
+  color: var(--color-ink);
+}
+
+@keyframes mm-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 229, 199, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(0, 229, 199, 0);
+  }
+}
+
+.animate-mm-pulse {
+  animation: mm-pulse 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
