@@ -36,7 +36,7 @@ export function Faq() {
                 className="overflow-hidden transition-[max-height] duration-400 ease-out"
                 style={{ maxHeight: isOpen ? "240px" : "0px" }}
               >
-                <p className="m-0 pr-10 pb-6 text-lg leading-[1.65] font-light text-ink-muted text-justify">
+                <p className="m-0 pr-10 pb-6 text-lg leading-[1.65] font-light text-ink-muted text-left md:text-justify">
                   {fq.a}
                 </p>
               </div>

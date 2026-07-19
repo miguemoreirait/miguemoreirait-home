@@ -26,14 +26,14 @@ export function AboutMe() {
           />
         </div>
         <div>
-          <p className="m-0 max-w-[62ch] text-2xl leading-[1.65] font-light text-ink-soft text-justify">
+          <p className="m-0 max-w-[62ch] text-2xl leading-[1.65] font-light text-ink-soft text-left md:text-justify">
             Profesional en Tecnología de la Información con más de 10 años de
             experiencia en soporte técnico, infraestructura y sistemas de
             videovigilancia, dentro de la Superintendencia de Comunicaciones
             de la Policía Federal Argentina, en entornos de infraestructura
             crítica.
           </p>
-          <p className="mt-6 max-w-[62ch] text-2xl leading-[1.65] font-light text-ink-muted text-justify">
+          <p className="mt-6 max-w-[62ch] text-2xl leading-[1.65] font-light text-ink-muted text-left md:text-justify">
             Hoy orientado a{" "}
             <em className="font-serif italic text-[26px] text-accent">
               ciberseguridad
@@ -46,7 +46,7 @@ export function AboutMe() {
         </div>
       </div>
 
-      <p className="mt-6 max-w-[80ch] text-2xl leading-[1.65] font-light text-ink-muted text-justify">
+      <p className="mt-6 max-w-[80ch] text-2xl leading-[1.65] font-light text-ink-muted text-left md:text-justify">
         Actualmente ayudo a personas que buscan dar el salto a IT o
         ciberseguridad — mejorando su CV, su LinkedIn y su presencia
         profesional para que la experiencia que ya tienen se traduzca en

@@ -70,11 +70,11 @@ export function Hero() {
           width={487}
           height={96}
           priority
-          className="w-[320px] sm:w-[420px] md:w-[520px] h-auto"
+          className="w-[clamp(180px,55vw,420px)] md:w-[520px] h-auto"
         />
       </div>
 
-      <p className="relative max-w-[58ch] mt-9 text-2xl leading-[1.6] font-light text-ink-muted text-justify">
+      <p className="relative max-w-[58ch] mt-9 text-2xl leading-[1.6] font-light text-ink-muted text-left md:text-justify">
         Licenciado en Tecnología de la Información, orientado a{" "}
         <em className="font-serif italic text-[26px] text-accent">
           ciberseguridad

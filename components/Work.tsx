@@ -37,7 +37,7 @@ export function Work() {
               <h3 className="m-0 font-sans font-semibold text-xl text-ink">
                 {item.titulo}
               </h3>
-              <p className="m-0 text-base leading-relaxed font-light text-ink-muted text-justify">
+              <p className="m-0 text-base leading-relaxed font-light text-ink-muted text-left md:text-justify">
                 {item.desc}
               </p>
             </div>

@@ -35,7 +35,7 @@ export function Services() {
             <h3 className="m-0 font-sans font-semibold text-xl text-ink">
               {srv.titulo}
             </h3>
-            <p className="m-0 text-base leading-[1.6] font-light text-ink-muted flex-1 text-justify">
+            <p className="m-0 text-base leading-[1.6] font-light text-ink-muted flex-1 text-left md:text-justify">
               {srv.desc}
             </p>
             <a
