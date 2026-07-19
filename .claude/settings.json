@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -o \"\\\\.w-\\\\\\\\\\\\[clamp[^{]*{[^}]*}\" c:/Dev/MigueMoreiraIT-Home/.next/static/chunks/3nzp10woy07vf.css)",
+      "Bash(python3 -c ' *)"
+    ]
+  }
+}
