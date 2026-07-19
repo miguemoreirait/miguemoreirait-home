@@ -11,46 +11,181 @@ export function Hero() {
       id="top"
       className="relative overflow-hidden max-w-[1240px] mx-auto px-12 pt-[196px] pb-[140px] box-border"
     >
+      {/* Circuit pattern, top strip — pinned to the header's own pt-[196px],
+          a fixed-height band that is guaranteed empty above the badge at
+          any viewport width (unlike a content-relative gutter, this never
+          drifts when the paragraph reflows). */}
       <svg
-        viewBox="0 0 1100 520"
-        className="absolute top-[60px] -right-[60px] w-[900px] h-auto pointer-events-none opacity-[0.14]"
+        viewBox="0 0 1240 196"
+        preserveAspectRatio="none"
+        className="absolute top-0 inset-x-0 w-full h-[196px] pointer-events-none"
         aria-hidden="true"
       >
         <motion.polyline
-          points="0,420 180,420 260,300 470,300 560,180 800,180 880,90 1100,90"
+          points="1240,50 1075,50 1075,145 920,145"
           fill="none"
           stroke="#94B4D2"
-          strokeWidth={1.5}
+          strokeWidth={1}
+          strokeOpacity={0.07}
+          className="hidden md:block"
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 1 }}
-          transition={{ duration: 3.2, ease: [0.4, 0, 0.2, 1], delay: 0.4 }}
+          transition={{ duration: 1.6, ease: [0.4, 0, 0.2, 1], delay: 0.4 }}
         />
+        <motion.polyline
+          points="0,80 150,80 150,150"
+          fill="none"
+          stroke="#94B4D2"
+          strokeWidth={1}
+          strokeOpacity={0.07}
+          className="hidden md:block"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 1.6, ease: [0.4, 0, 0.2, 1], delay: 0.65 }}
+        />
+        <motion.polyline
+          points="1240,55 950,55 950,150"
+          fill="none"
+          stroke="#94B4D2"
+          strokeWidth={1}
+          strokeOpacity={0.07}
+          className="md:hidden"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 1.4, ease: [0.4, 0, 0.2, 1], delay: 0.4 }}
+        />
+
+        {/* static junction node (desktop) */}
         <motion.circle
-          cx={260}
-          cy={300}
+          cx={1075}
+          cy={145}
           r={3}
-          fill="#94B4D2"
+          fill="#00E5C7"
+          className="hidden md:block"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 1.4 }}
         />
+        {/* pulsing terminal node (desktop) — the only continuous loop */}
         <motion.circle
-          cx={560}
-          cy={180}
+          cx={920}
+          cy={145}
           r={3}
-          fill="#94B4D2"
+          fill="#00E5C7"
+          className="hidden md:block"
+          style={{ originX: 0.5, originY: 0.5 }}
+          initial={{ opacity: 0, scale: 1 }}
+          animate={{ opacity: [0.5, 0], scale: [1, 2.8] }}
+          transition={{
+            duration: 10,
+            delay: 2.5,
+            repeat: Infinity,
+            ease: "easeOut",
+          }}
+        />
+        <motion.circle
+          cx={920}
+          cy={145}
+          r={3.5}
+          fill="#00E5C7"
+          className="hidden md:block"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 2.1 }}
         />
+
+        {/* pulsing terminal node (mobile) */}
         <motion.circle
-          cx={880}
-          cy={90}
+          cx={950}
+          cy={150}
           r={3}
           fill="#00E5C7"
+          className="md:hidden"
+          style={{ originX: 0.5, originY: 0.5 }}
+          initial={{ opacity: 0, scale: 1 }}
+          animate={{ opacity: [0.5, 0], scale: [1, 2.8] }}
+          transition={{
+            duration: 10,
+            delay: 2.3,
+            repeat: Infinity,
+            ease: "easeOut",
+          }}
+        />
+        <motion.circle
+          cx={950}
+          cy={150}
+          r={3.5}
+          fill="#00E5C7"
+          className="md:hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.4, delay: 2.9 }}
+          transition={{ duration: 0.4, delay: 1.9 }}
+        />
+      </svg>
+
+      {/* Circuit pattern, bottom strip — pinned to the header's own
+          pb-[140px], same guarantee as the top strip but below the buttons. */}
+      <svg
+        viewBox="0 0 1240 140"
+        preserveAspectRatio="none"
+        className="absolute bottom-0 inset-x-0 w-full h-[140px] pointer-events-none"
+        aria-hidden="true"
+      >
+        <motion.polyline
+          points="1240,40 1080,40 1080,95 900,95"
+          fill="none"
+          stroke="#94B4D2"
+          strokeWidth={1}
+          strokeOpacity={0.07}
+          className="hidden md:block"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 1.6, ease: [0.4, 0, 0.2, 1], delay: 0.9 }}
+        />
+        <motion.polyline
+          points="0,85 160,85 160,25"
+          fill="none"
+          stroke="#94B4D2"
+          strokeWidth={1}
+          strokeOpacity={0.07}
+          className="hidden md:block"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 1.6, ease: [0.4, 0, 0.2, 1], delay: 1.15 }}
+        />
+        <motion.polyline
+          points="0,100 130,100 130,30"
+          fill="none"
+          stroke="#94B4D2"
+          strokeWidth={1}
+          strokeOpacity={0.07}
+          className="md:hidden"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1], delay: 0.65 }}
+        />
+
+        {/* static junction node (desktop) */}
+        <motion.circle
+          cx={900}
+          cy={95}
+          r={3}
+          fill="#00E5C7"
+          className="hidden md:block"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4, delay: 2.6 }}
+        />
+        {/* static junction node (mobile) */}
+        <motion.circle
+          cx={130}
+          cy={30}
+          r={3}
+          fill="#00E5C7"
+          className="md:hidden"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4, delay: 1.95 }}
         />
       </svg>
 
